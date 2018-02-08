@@ -271,6 +271,12 @@
                       </a></li>
                       
                       <li><a
+                        href='#transportsetexchangetimeout'
+                        class='regular pre-open'>
+                        #setExchangeTimeout
+                      </a></li>
+                      
+                      <li><a
                         href='#transportsend'
                         class='regular pre-open'>
                         #send
@@ -558,7 +564,7 @@
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-app-btc/src/Btc.js#L27-L941'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-app-btc/src/Btc.js#L27-L973'>
       <span>packages/hw-app-btc/src/Btc.js</span>
       </a>
     
@@ -629,7 +635,7 @@
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-app-btc/src/Btc.js#L51-L89'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-app-btc/src/Btc.js#L51-L89'>
       <span>packages/hw-app-btc/src/Btc.js</span>
       </a>
     
@@ -726,7 +732,7 @@
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-app-btc/src/Btc.js#L355-L376'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-app-btc/src/Btc.js#L357-L378'>
       <span>packages/hw-app-btc/src/Btc.js</span>
       </a>
     
@@ -816,7 +822,7 @@
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-app-btc/src/Btc.js#L387-L446'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-app-btc/src/Btc.js#L389-L448'>
       <span>packages/hw-app-btc/src/Btc.js</span>
       </a>
     
@@ -897,7 +903,7 @@
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>createPaymentTransactionNew(inputs, associatedKeysets, changePath, outputScriptHex, lockTime, sigHashType, segwit, outputScript)</span>
+            <span class='code strong strong truncate'>createPaymentTransactionNew(inputs, associatedKeysets, changePath, outputScriptHex, lockTime, sigHashType, segwit, initialTimestamp, outputScript)</span>
         </div>
       </div>
       <div class="clearfix display-none toggle-target">
@@ -907,7 +913,7 @@
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-app-btc/src/Btc.js#L471-L658'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-app-btc/src/Btc.js#L474-L672'>
       <span>packages/hw-app-btc/src/Btc.js</span>
       </a>
     
@@ -917,7 +923,7 @@
   <p>To sign a transaction involving standard (P2PKH) inputs, call createPaymentTransactionNew with the following parameters</p>
 
 
-  <div class='pre p1 fill-light mt0'>createPaymentTransactionNew(inputs: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;[<a href="#transaction">Transaction</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?]>, associatedKeysets: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>, changePath: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, outputScriptHex: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, lockTime: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, sigHashType: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, segwit: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, outputScript: any): any</div>
+  <div class='pre p1 fill-light mt0'>createPaymentTransactionNew(inputs: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;[<a href="#transaction">Transaction</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?]>, associatedKeysets: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>, changePath: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, outputScriptHex: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, lockTime: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, sigHashType: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, segwit: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, initialTimestamp: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, outputScript: any): any</div>
   
   
 
@@ -1006,6 +1012,15 @@
       
         <div class='space-bottom0'>
           <div>
+            <span class='code bold'>initialTimestamp</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    is the timestamp in ms when the function is called, not the one that the tx will include
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
             <span class='code bold'>outputScript</span> <code class='quiet'>(any)</code>
 	    is the hexadecimal serialized outputs of the transaction to sign
 
@@ -1067,7 +1082,7 @@
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-app-btc/src/Btc.js#L679-L769'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-app-btc/src/Btc.js#L693-L783'>
       <span>packages/hw-app-btc/src/Btc.js</span>
       </a>
     
@@ -1198,7 +1213,7 @@
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>splitTransaction(transactionHex, isSegwitSupported)</span>
+            <span class='code strong strong truncate'>splitTransaction(transactionHex, isSegwitSupported, hasTimestamp)</span>
         </div>
       </div>
       <div class="clearfix display-none toggle-target">
@@ -1208,7 +1223,7 @@
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-app-btc/src/Btc.js#L805-L857'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-app-btc/src/Btc.js#L819-L884'>
       <span>packages/hw-app-btc/src/Btc.js</span>
       </a>
     
@@ -1218,7 +1233,7 @@
   <p>For each UTXO included in your transaction, create a transaction object from the raw serialized version of the transaction used in this UTXO.</p>
 
 
-  <div class='pre p1 fill-light mt0'>splitTransaction(transactionHex: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, isSegwitSupported: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>): <a href="#transaction">Transaction</a></div>
+  <div class='pre p1 fill-light mt0'>splitTransaction(transactionHex: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, isSegwitSupported: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?, hasTimestamp: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>): <a href="#transaction">Transaction</a></div>
   
   
 
@@ -1243,7 +1258,17 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>isSegwitSupported</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</code>
+            <span class='code bold'>isSegwitSupported</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?
+            = <code>false</code>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>hasTimestamp</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>
+            = <code>false</code>)</code>
 	    
           </div>
           
@@ -1295,7 +1320,7 @@
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-app-btc/src/Btc.js#L864-L881'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-app-btc/src/Btc.js#L891-L908'>
       <span>packages/hw-app-btc/src/Btc.js</span>
       </a>
     
@@ -1388,7 +1413,7 @@
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>serializeTransaction(transaction, skipWitness)</span>
+            <span class='code strong strong truncate'>serializeTransaction(transaction, skipWitness, timestamp)</span>
         </div>
       </div>
       <div class="clearfix display-none toggle-target">
@@ -1398,7 +1423,7 @@
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-app-btc/src/Btc.js#L885-L918'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-app-btc/src/Btc.js#L912-L950'>
       <span>packages/hw-app-btc/src/Btc.js</span>
       </a>
     
@@ -1407,7 +1432,7 @@
 
   
 
-  <div class='pre p1 fill-light mt0'>serializeTransaction(transaction: <a href="#transaction">Transaction</a>, skipWitness: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</div>
+  <div class='pre p1 fill-light mt0'>serializeTransaction(transaction: <a href="#transaction">Transaction</a>, skipWitness: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, timestamp: <a href="https://nodejs.org/api/buffer.html">Buffer</a>)</div>
   
   
 
@@ -1433,6 +1458,14 @@
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>skipWitness</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>timestamp</span> <code class='quiet'>(<a href="https://nodejs.org/api/buffer.html">Buffer</a>)</code>
 	    
           </div>
           
@@ -1473,7 +1506,7 @@
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-app-btc/src/Btc.js#L922-L940'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-app-btc/src/Btc.js#L954-L972'>
       <span>packages/hw-app-btc/src/Btc.js</span>
       </a>
     
@@ -1546,7 +1579,7 @@
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-app-eth/src/Eth.js#L30-L229'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-app-eth/src/Eth.js#L30-L229'>
       <span>packages/hw-app-eth/src/Eth.js</span>
       </a>
     
@@ -1617,7 +1650,7 @@
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-app-eth/src/Eth.js#L47-L95'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-app-eth/src/Eth.js#L47-L95'>
       <span>packages/hw-app-eth/src/Eth.js</span>
       </a>
     
@@ -1716,7 +1749,7 @@
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-app-eth/src/Eth.js#L102-L148'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-app-eth/src/Eth.js#L102-L148'>
       <span>packages/hw-app-eth/src/Eth.js</span>
       </a>
     
@@ -1803,7 +1836,7 @@
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-app-eth/src/Eth.js#L152-L162'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-app-eth/src/Eth.js#L152-L162'>
       <span>packages/hw-app-eth/src/Eth.js</span>
       </a>
     
@@ -1862,7 +1895,7 @@
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-app-eth/src/Eth.js#L176-L228'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-app-eth/src/Eth.js#L176-L228'>
       <span>packages/hw-app-eth/src/Eth.js</span>
       </a>
     
@@ -1962,7 +1995,7 @@ v = <span class="hljs-string">"0"</span> + v;
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-app-xrp/src/Xrp.js#L13-L174'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-app-xrp/src/Xrp.js#L13-L174'>
       <span>packages/hw-app-xrp/src/Xrp.js</span>
       </a>
     
@@ -2033,7 +2066,7 @@ v = <span class="hljs-string">"0"</span> + v;
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-app-xrp/src/Xrp.js#L33-L79'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-app-xrp/src/Xrp.js#L33-L79'>
       <span>packages/hw-app-xrp/src/Xrp.js</span>
       </a>
     
@@ -2144,7 +2177,7 @@ v = <span class="hljs-string">"0"</span> + v;
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-app-xrp/src/Xrp.js#L91-L153'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-app-xrp/src/Xrp.js#L91-L153'>
       <span>packages/hw-app-xrp/src/Xrp.js</span>
       </a>
     
@@ -2245,7 +2278,7 @@ v = <span class="hljs-string">"0"</span> + v;
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-app-xrp/src/Xrp.js#L166-L173'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-app-xrp/src/Xrp.js#L166-L173'>
       <span>packages/hw-app-xrp/src/Xrp.js</span>
       </a>
     
@@ -2324,7 +2357,7 @@ v = <span class="hljs-string">"0"</span> + v;
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport/src/Transport.js#L92-L274'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L92-L282'>
       <span>packages/hw-transport/src/Transport.js</span>
       </a>
     
@@ -2375,7 +2408,7 @@ it can be for instance an ID, an file path, a URL,...</p>
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport/src/Transport.js#L98-L98'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L99-L99'>
       <span>packages/hw-transport/src/Transport.js</span>
       </a>
     
@@ -2435,7 +2468,7 @@ it can be for instance an ID, an file path, a URL,...</p>
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport/src/Transport.js#L106-L106'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L107-L107'>
       <span>packages/hw-transport/src/Transport.js</span>
       </a>
     
@@ -2509,7 +2542,7 @@ it can be for instance an ID, an file path, a URL,...</p>
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport/src/Transport.js#L128-L130'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L129-L131'>
       <span>packages/hw-transport/src/Transport.js</span>
       </a>
     
@@ -2612,7 +2645,7 @@ sub.unsubscribe();
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport/src/Transport.js#L140-L143'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L141-L144'>
       <span>packages/hw-transport/src/Transport.js</span>
       </a>
     
@@ -2699,7 +2732,7 @@ sub.unsubscribe();
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>create(timeout)</span>
+            <span class='code strong strong truncate'>create(openTimeout)</span>
         </div>
       </div>
       <div class="clearfix display-none toggle-target">
@@ -2709,7 +2742,7 @@ sub.unsubscribe();
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport/src/Transport.js#L241-L273'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L249-L281'>
       <span>packages/hw-transport/src/Transport.js</span>
       </a>
     
@@ -2721,7 +2754,7 @@ throw if there is none or if timeout is reached.
 This is a light helper, alternative to using listen() and open() (that you may need for any more advanced usecase)</p>
 
 
-  <div class='pre p1 fill-light mt0'>create(timeout: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#transport">Transport</a>&#x3C;Descriptor>></div>
+  <div class='pre p1 fill-light mt0'>create(openTimeout: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#transport">Transport</a>&#x3C;Descriptor>></div>
   
   
 
@@ -2738,7 +2771,7 @@ This is a light helper, alternative to using listen() and open() (that you may n
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>timeout</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
+            <span class='code bold'>openTimeout</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
             = <code>5000</code>)</code>
 	    
           </div>
@@ -2799,7 +2832,7 @@ This is a light helper, alternative to using listen() and open() (that you may n
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport/src/Transport.js#L152-L152'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L153-L153'>
       <span>packages/hw-transport/src/Transport.js</span>
       </a>
     
@@ -2883,7 +2916,7 @@ Instead, the recommanded way is to use send() method</p>
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport/src/Transport.js#L159-L159'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L160-L160'>
       <span>packages/hw-transport/src/Transport.js</span>
       </a>
     
@@ -2958,7 +2991,7 @@ Each App can have a different scramble key and they internally will set it at in
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport/src/Transport.js#L165-L165'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L166-L166'>
       <span>packages/hw-transport/src/Transport.js</span>
       </a>
     
@@ -3026,7 +3059,7 @@ Each App can have a different scramble key and they internally will set it at in
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport/src/Transport.js#L174-L176'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L175-L177'>
       <span>packages/hw-transport/src/Transport.js</span>
       </a>
     
@@ -3106,7 +3139,7 @@ Transport implementation can have specific events. Here is the common events:</p
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport/src/Transport.js#L181-L183'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L182-L184'>
       <span>packages/hw-transport/src/Transport.js</span>
       </a>
     
@@ -3182,7 +3215,7 @@ Transport implementation can have specific events. Here is the common events:</p
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport/src/Transport.js#L192-L194'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L193-L195'>
       <span>packages/hw-transport/src/Transport.js</span>
       </a>
     
@@ -3236,6 +3269,74 @@ Transport implementation can have specific events. Here is the common events:</p
       </div>
     </div>
   
+    <div class='border-bottom' id='transportsetexchangetimeout'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>setExchangeTimeout(exchangeTimeout)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L200-L202'>
+      <span>packages/hw-transport/src/Transport.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Set a timeout (in milliseconds) for the exchange call. Only some transport might implement it. (e.g. U2F)</p>
+
+
+  <div class='pre p1 fill-light mt0'>setExchangeTimeout(exchangeTimeout: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>exchangeTimeout</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
     <div class='border-bottom' id='transportsend'>
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
@@ -3250,7 +3351,7 @@ Transport implementation can have specific events. Here is the common events:</p
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport/src/Transport.js#L206-L232'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L214-L240'>
       <span>packages/hw-transport/src/Transport.js</span>
       </a>
     
@@ -3377,7 +3478,7 @@ Transport implementation can have specific events. Here is the common events:</p
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-app-btc/src/Btc.js#L945-L949'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-app-btc/src/Btc.js#L977-L981'>
       <span>packages/hw-app-btc/src/Btc.js</span>
       </a>
     
@@ -3455,7 +3556,7 @@ Transport implementation can have specific events. Here is the common events:</p
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-app-btc/src/Btc.js#L953-L956'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-app-btc/src/Btc.js#L985-L988'>
       <span>packages/hw-app-btc/src/Btc.js</span>
       </a>
     
@@ -3527,7 +3628,7 @@ Transport implementation can have specific events. Here is the common events:</p
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-app-btc/src/Btc.js#L960-L966'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-app-btc/src/Btc.js#L992-L999'>
       <span>packages/hw-app-btc/src/Btc.js</span>
       </a>
     
@@ -3540,7 +3641,7 @@ Transport implementation can have specific events. Here is the common events:</p
   
     <p>
       Type:
-      {version: <a href="https://nodejs.org/api/buffer.html">Buffer</a>, inputs: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#transactioninput">TransactionInput</a>>, outputs: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#transactionoutput">TransactionOutput</a>>?, locktime: <a href="https://nodejs.org/api/buffer.html">Buffer</a>?, witness: <a href="https://nodejs.org/api/buffer.html">Buffer</a>?}
+      {version: <a href="https://nodejs.org/api/buffer.html">Buffer</a>, inputs: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#transactioninput">TransactionInput</a>>, outputs: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#transactionoutput">TransactionOutput</a>>?, locktime: <a href="https://nodejs.org/api/buffer.html">Buffer</a>?, witness: <a href="https://nodejs.org/api/buffer.html">Buffer</a>?, timestamp: <a href="https://nodejs.org/api/buffer.html">Buffer</a>?}
     </p>
   
   
@@ -3588,6 +3689,12 @@ Transport implementation can have specific events. Here is the common events:</p
           
         </div>
       
+        <div class='space-bottom0'>
+          <span class='code bold'>timestamp</span> <code class='quiet'>(<a href="https://nodejs.org/api/buffer.html">Buffer</a>?)</code>
+          
+          
+        </div>
+      
     </div>
   
 
@@ -3617,7 +3724,7 @@ Transport implementation can have specific events. Here is the common events:</p
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport-http/src/HttpTransport.js#L10-L75'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport-http/src/HttpTransport.js#L10-L75'>
       <span>packages/hw-transport-http/src/HttpTransport.js</span>
       </a>
     
@@ -3688,7 +3795,7 @@ Transport implementation can have specific events. Here is the common events:</p
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport-node-hid/src/TransportNodeHid.js#L36-L391'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport-node-hid/src/TransportNodeHid.js#L36-L391'>
       <span>packages/hw-transport-node-hid/src/TransportNodeHid.js</span>
       </a>
     
@@ -3792,7 +3899,7 @@ TransportNodeHid.create().then(<span class="hljs-function"><span class="hljs-par
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport-node-hid/src/TransportNodeHid.js#L65-L95'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport-node-hid/src/TransportNodeHid.js#L65-L95'>
       <span>packages/hw-transport-node-hid/src/TransportNodeHid.js</span>
       </a>
     
@@ -3846,7 +3953,7 @@ TransportNodeHid.create().then(<span class="hljs-function"><span class="hljs-par
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport-node-hid/src/TransportNodeHid.js#L99-L101'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport-node-hid/src/TransportNodeHid.js#L99-L101'>
       <span>packages/hw-transport-node-hid/src/TransportNodeHid.js</span>
       </a>
     
@@ -3921,7 +4028,7 @@ TransportNodeHid.create().then(<span class="hljs-function"><span class="hljs-par
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport-u2f/src/TransportU2F.js#L48-L120'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport-u2f/src/TransportU2F.js#L48-L114'>
       <span>packages/hw-transport-u2f/src/TransportU2F.js</span>
       </a>
     
@@ -3931,7 +4038,7 @@ TransportNodeHid.create().then(<span class="hljs-function"><span class="hljs-par
   <p>U2F web Transport implementation</p>
 
 
-  <div class='pre p1 fill-light mt0'>new TransportU2F(timeoutSeconds: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</div>
+  <div class='pre p1 fill-light mt0'>new TransportU2F()</div>
   
   
     <p>
@@ -3949,20 +4056,6 @@ TransportNodeHid.create().then(<span class="hljs-function"><span class="hljs-par
   
   
 
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>timeoutSeconds</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
-            = <code>20</code>)</code>
-	    
-          </div>
-          
-        </div>
-      
-    </div>
   
 
   
@@ -3989,7 +4082,7 @@ TransportU2F.create().then(<span class="hljs-function"><span class="hljs-params"
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>open(_, timeout)</span>
+            <span class='code strong strong truncate'>open()</span>
         </div>
       </div>
       <div class="clearfix display-none toggle-target">
@@ -3999,7 +4092,7 @@ TransportU2F.create().then(<span class="hljs-function"><span class="hljs-params"
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport-u2f/src/TransportU2F.js#L79-L81'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport-u2f/src/TransportU2F.js#L73-L75'>
       <span>packages/hw-transport-u2f/src/TransportU2F.js</span>
       </a>
     
@@ -4009,7 +4102,7 @@ TransportU2F.create().then(<span class="hljs-function"><span class="hljs-params"
   <p>static function to create a new Transport from a connected Ledger device discoverable via U2F (browser support)</p>
 
 
-  <div class='pre p1 fill-light mt0'>open(_: any, timeout: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#transportu2f">TransportU2F</a>></div>
+  <div class='pre p1 fill-light mt0'>open(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#transportu2f">TransportU2F</a>></div>
   
   
 
@@ -4020,27 +4113,6 @@ TransportU2F.create().then(<span class="hljs-function"><span class="hljs-params"
   
   
 
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>_</span> <code class='quiet'>(any)</code>
-	    
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>timeout</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
-	    
-          </div>
-          
-        </div>
-      
-    </div>
   
 
   
@@ -4088,7 +4160,7 @@ TransportU2F.create().then(<span class="hljs-function"><span class="hljs-params"
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport/src/Transport.js#L7-L7'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L7-L7'>
       <span>packages/hw-transport/src/Transport.js</span>
       </a>
     
@@ -4154,7 +4226,7 @@ TransportU2F.create().then(<span class="hljs-function"><span class="hljs-params"
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport/src/Transport.js#L11-L11'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L11-L11'>
       <span>packages/hw-transport/src/Transport.js</span>
       </a>
     
@@ -4209,7 +4281,7 @@ TransportU2F.create().then(<span class="hljs-function"><span class="hljs-params"
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport/src/Transport.js#L15-L19'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L15-L19'>
       <span>packages/hw-transport/src/Transport.js</span>
       </a>
     
@@ -4287,7 +4359,7 @@ TransportU2F.create().then(<span class="hljs-function"><span class="hljs-params"
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport/src/Transport.js#L22-L26'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L22-L26'>
       <span>packages/hw-transport/src/Transport.js</span>
       </a>
     
@@ -4365,7 +4437,7 @@ TransportU2F.create().then(<span class="hljs-function"><span class="hljs-params"
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport/src/Transport.js#L34-L59'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L34-L59'>
       <span>packages/hw-transport/src/Transport.js</span>
       </a>
     
@@ -4420,7 +4492,7 @@ TransportU2F.create().then(<span class="hljs-function"><span class="hljs-params"
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport/src/Transport.js#L38-L38'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L38-L38'>
       <span>packages/hw-transport/src/Transport.js</span>
       </a>
     
@@ -4475,7 +4547,7 @@ TransportU2F.create().then(<span class="hljs-function"><span class="hljs-params"
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport/src/Transport.js#L42-L42'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L42-L42'>
       <span>packages/hw-transport/src/Transport.js</span>
       </a>
     
@@ -4530,7 +4602,7 @@ TransportU2F.create().then(<span class="hljs-function"><span class="hljs-params"
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport/src/Transport.js#L46-L46'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L46-L46'>
       <span>packages/hw-transport/src/Transport.js</span>
       </a>
     
@@ -4585,7 +4657,7 @@ TransportU2F.create().then(<span class="hljs-function"><span class="hljs-params"
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport/src/Transport.js#L50-L50'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L50-L50'>
       <span>packages/hw-transport/src/Transport.js</span>
       </a>
     
@@ -4640,7 +4712,7 @@ TransportU2F.create().then(<span class="hljs-function"><span class="hljs-params"
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport/src/Transport.js#L54-L54'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L54-L54'>
       <span>packages/hw-transport/src/Transport.js</span>
       </a>
     
@@ -4695,7 +4767,7 @@ TransportU2F.create().then(<span class="hljs-function"><span class="hljs-params"
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport/src/Transport.js#L58-L58'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L58-L58'>
       <span>packages/hw-transport/src/Transport.js</span>
       </a>
     
@@ -4758,7 +4830,7 @@ TransportU2F.create().then(<span class="hljs-function"><span class="hljs-params"
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport/src/Transport.js#L65-L70'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L65-L70'>
       <span>packages/hw-transport/src/Transport.js</span>
       </a>
     
@@ -4831,7 +4903,7 @@ e.g. Error thrown when data received by exchanges are incorrect or if exchanged 
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/hw-transport/src/Transport.js#L78-L83'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/hw-transport/src/Transport.js#L78-L83'>
       <span>packages/hw-transport/src/Transport.js</span>
       </a>
     
@@ -4896,7 +4968,7 @@ the error.statusCode is one of the <code>StatusCodes</code> exported by this lib
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/react-native-hw-transport-ble/src/index.js#L118-L265'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/react-native-hw-transport-ble/src/index.js#L118-L265'>
       <span>packages/react-native-hw-transport-ble/src/index.js</span>
       </a>
     
@@ -4987,7 +5059,7 @@ the error.statusCode is one of the <code>StatusCodes</code> exported by this lib
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/react-native-hw-transport-ble/src/index.js#L126-L165'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/react-native-hw-transport-ble/src/index.js#L126-L165'>
       <span>packages/react-native-hw-transport-ble/src/index.js</span>
       </a>
     
@@ -5054,7 +5126,7 @@ the error.statusCode is one of the <code>StatusCodes</code> exported by this lib
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/158cff604d56842367a639b798a45213453ebb84/packages/react-native-hw-transport-ble/src/index.js#L169-L215'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/LedgerHQ/ledgerjs/blob/115396b64756d46bca63156706cfdea8b9144b9c/packages/react-native-hw-transport-ble/src/index.js#L169-L215'>
       <span>packages/react-native-hw-transport-ble/src/index.js</span>
       </a>
     
