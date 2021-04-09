@@ -1,6 +1,6 @@
 {
   "name": "@ledgerhq/devices",
-  "version": "5.48.1-uglifyjs.1",
+  "version": "5.48.1-uglify.0",
   "description": "Ledger devices",
   "keywords": [
     "Ledger"
@@ -23,8 +23,8 @@
     "flow-bin": "^0.147.0"
   },
   "dependencies": {
-    "@ledgerhq/errors": "^5.48.1-uglifyjs.1",
-    "@ledgerhq/logs": "^5.48.1-uglifyjs.1",
+    "@ledgerhq/errors": "^5.48.1-uglify.0",
+    "@ledgerhq/logs": "^5.48.1-uglify.0",
     "rxjs": "^6.6.7",
     "semver": "^7.3.5"
   },
@@ -35,5 +35,5 @@
     "watch": "bash ../../script/watch.sh",
     "doc": "bash ../../script/doc.sh"
   },
-  "gitHead": "fca2c7ce74fdb88df4d59dca4cc0e668410d66af"
+  "gitHead": "4172842d944e1fd815295c3fb74ed2e954ce09b3"
 }

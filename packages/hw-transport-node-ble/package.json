@@ -1,6 +1,6 @@
 {
   "name": "@ledgerhq/hw-transport-node-ble",
-  "version": "5.48.1-uglifyjs.1",
+  "version": "5.48.1-uglify.0",
   "description": "Ledger Hardware Wallet Bluetooth BLE transport for Node.js (noble)",
   "keywords": [
     "Ledger",
@@ -28,10 +28,10 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@abandonware/noble": "1.9.2-12",
-    "@ledgerhq/devices": "^5.48.1-uglifyjs.1",
-    "@ledgerhq/errors": "^5.48.1-uglifyjs.1",
-    "@ledgerhq/hw-transport": "^5.48.1-uglifyjs.1",
-    "@ledgerhq/logs": "^5.48.1-uglifyjs.1",
+    "@ledgerhq/devices": "^5.48.1-uglify.0",
+    "@ledgerhq/errors": "^5.48.1-uglify.0",
+    "@ledgerhq/hw-transport": "^5.48.1-uglify.0",
+    "@ledgerhq/logs": "^5.48.1-uglify.0",
     "invariant": "^2.2.4",
     "rxjs": "^6.6.7"
   },
@@ -45,5 +45,5 @@
     "watch": "bash ../../script/watch.sh",
     "doc": "bash ../../script/doc.sh"
   },
-  "gitHead": "fca2c7ce74fdb88df4d59dca4cc0e668410d66af"
+  "gitHead": "4172842d944e1fd815295c3fb74ed2e954ce09b3"
 }

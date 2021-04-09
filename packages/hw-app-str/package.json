@@ -1,6 +1,6 @@
 {
   "name": "@ledgerhq/hw-app-str",
-  "version": "5.48.1-uglifyjs.1",
+  "version": "5.48.1-uglify.0",
   "description": "Ledger Hardware Wallet Stellar Application API",
   "keywords": [
     "Ledger",
@@ -26,7 +26,7 @@
   "module": "lib-es/Str.js",
   "license": "Apache-2.0",
   "dependencies": {
-    "@ledgerhq/hw-transport": "^5.48.1-uglifyjs.1",
+    "@ledgerhq/hw-transport": "^5.48.1-uglify.0",
     "base32.js": "^0.1.0",
     "sha.js": "^2.3.6",
     "tweetnacl": "^1.0.3"
@@ -40,5 +40,5 @@
     "build": "bash ../../script/build.sh",
     "watch": "bash ../../script/watch.sh"
   },
-  "gitHead": "fca2c7ce74fdb88df4d59dca4cc0e668410d66af"
+  "gitHead": "4172842d944e1fd815295c3fb74ed2e954ce09b3"
 }

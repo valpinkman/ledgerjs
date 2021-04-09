@@ -1,6 +1,6 @@
 {
   "name": "@ledgerhq/hw-app-trx",
-  "version": "5.48.1-uglifyjs.1",
+  "version": "5.48.1-uglify.0",
   "description": "Ledger Hardware Wallet Tron Application API",
   "keywords": [
     "Ledger",
@@ -26,8 +26,8 @@
   "module": "lib-es/Trx.js",
   "license": "Apache-2.0",
   "dependencies": {
-    "@ledgerhq/errors": "^5.48.1-uglifyjs.1",
-    "@ledgerhq/hw-transport": "^5.48.1-uglifyjs.1"
+    "@ledgerhq/errors": "^5.48.1-uglify.0",
+    "@ledgerhq/hw-transport": "^5.48.1-uglify.0"
   },
   "devDependencies": {
     "flow-bin": "^0.147.0"
@@ -39,5 +39,5 @@
     "watch": "bash ../../script/watch.sh",
     "doc": "bash ../../script/doc.sh"
   },
-  "gitHead": "fca2c7ce74fdb88df4d59dca4cc0e668410d66af"
+  "gitHead": "4172842d944e1fd815295c3fb74ed2e954ce09b3"
 }
