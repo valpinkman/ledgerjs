@@ -1,7 +1,7 @@
 import invariant from "invariant";
 import Transport from "@ledgerhq/hw-transport";
-export const getAppAndVersion = async (
-  transport: Transport
+export const getAppAndVersion = async <Descriptor>(
+  transport: Transport<Descriptor>
 ): Promise<{
   name: string;
   version: string;

@@ -1,7 +1,7 @@
 import type Transport from "@ledgerhq/hw-transport";
 import { bip32asBuffer } from "./bip32";
-export function signTransaction(
-  transport: Transport,
+export function signTransaction<Descriptor>(
+  transport: Transport<Descriptor>,
   path: string,
   lockTime: number,
   sigHashType: number,

@@ -64,7 +64,7 @@ async function getFirstLedgerDevice(): Promise<HIDDevice> {
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-export default class TransportWebHID extends Transport {
+export default class TransportWebHID<Descriptor> extends Transport<Descriptor> {
   device: HIDDevice;
   deviceModel: DeviceModel | null | undefined;
   channel = Math.floor(Math.random() * 0xffff);

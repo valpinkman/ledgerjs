@@ -59,8 +59,8 @@ export type CreateTransactionArg = {
   onDeviceSignatureRequested?: () => void;
   onDeviceSignatureGranted?: () => void;
 };
-export async function createTransaction(
-  transport: Transport,
+export async function createTransaction<Descriptor>(
+  transport: Transport<Descriptor>,
   arg: CreateTransactionArg
 ) {
   const {

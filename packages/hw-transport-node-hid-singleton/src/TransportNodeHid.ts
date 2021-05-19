@@ -20,7 +20,9 @@ let transportInstance;
  * TransportNodeHid.create().then(transport => ...)
  */
 
-export default class TransportNodeHidSingleton extends TransportNodeHidNoEvents {
+export default class TransportNodeHidSingleton<
+  Descriptor
+> extends TransportNodeHidNoEvents<Descriptor> {
   /**
    *
    */
@@ -102,7 +104,7 @@ export default class TransportNodeHidSingleton extends TransportNodeHidNoEvents 
   /**
    * if path="" is not provided, the library will take the first device
    */
-  static open(): Promise<TransportNodeHidSingleton> {
+  static open<Descriptor>(): Promise<TransportNodeHidSingleton<Descriptor>> {
     return Promise.resolve().then(() => {
       if (transportInstance) {
         log("hid-verbose", "reusing opened transport instance");

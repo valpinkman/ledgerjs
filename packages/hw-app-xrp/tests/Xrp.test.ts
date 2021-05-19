@@ -11,7 +11,7 @@ test("getAppConfiguration", async () => {
     <= 000100069000
     `)
   );
-  // @ts-expect-error
+
   const transport = await Transport.open();
   const xrp = new Xrp(transport);
   const result = await xrp.getAppConfiguration();
@@ -25,7 +25,7 @@ test("getPublicKey", async () => {
     <= 21031d68bc1a142e6766b2bdfb006ccfe135ef2e0e2e94abb5cf5c9ab6104776fbae227248734d4751456b564e4a6d70475773385855426f54426941416277785a4e3576339000
     `)
   );
-  // @ts-expect-error
+
   const transport = await Transport.open();
   const xrp = new Xrp(transport);
   const result = await xrp.getAddress("44'/144'/0'/0/0");
@@ -43,7 +43,7 @@ test("signTransaction", async () => {
     <= 3044022041673ea6da17205b9b0d279436b508cd092b686bf5b921ddf4fbf38879e4950402207510cebf32019f5d994102bfe6570bb2f5d0b931902ad6d839c5b4552a492cb99000
     `)
   );
-  // @ts-expect-error
+
   const transport = await Transport.open();
   const xrp = new Xrp(transport);
   const result = await xrp.signTransaction(

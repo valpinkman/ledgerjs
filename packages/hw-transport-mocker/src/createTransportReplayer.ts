@@ -6,13 +6,13 @@ import type { RecordStore } from "./RecordStore";
  * create a transport replayer with a record store.
  * @param recordStore
  */
-const createTransportReplayer = (
+const createTransportReplayer = <Descriptor>(
   recordStore: RecordStore
-): new () => Transport => {
-  class TransportReplayer extends Transport {
-    static isSupported = () => Promise.resolve(true);
-    static list = () => Promise.resolve([null]);
-    static listen = (o) => {
+): new () => Transport<Descriptor> => {
+  class TransportReplayer extends Transport<Descriptor> {
+    static readonly isSupported = () => Promise.resolve(true);
+    static readonly list = () => Promise.resolve([]);
+    static readonly listen = (o) => {
       let unsubscribed;
       setTimeout(() => {
         if (unsubscribed) return;
@@ -28,7 +28,7 @@ const createTransportReplayer = (
         },
       };
     };
-    static open = () => Promise.resolve(new TransportReplayer());
+    static readonly open = () => Promise.resolve(new TransportReplayer());
 
     setScrambleKey() {}
 

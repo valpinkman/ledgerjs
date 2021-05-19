@@ -6,11 +6,11 @@ import type { RecordStore } from "./RecordStore";
  * @param {Transport} DecoratedTransport: an actual transport class. Like @ledgerhq/hw-transport-webusb
  * @param {RecordStore} recordStore: a record store to record the apdu in.
  */
-const createTransportRecorder = (
-  DecoratedTransport: Transport,
+const createTransportRecorder = <Descriptor>(
+  DecoratedTransport: Transport<Descriptor>,
   recordStore: RecordStore
-): new (T) => Transport => {
-  class TransportRecorder extends Transport {
+): new (t: Transport<Descriptor>) => Transport<Descriptor> => {
+  class TransportRecorder extends Transport<Descriptor> {
     static recordStore = recordStore;
     static isSupported = (DecoratedTransport.constructor as typeof Transport)
       .isSupported;
@@ -27,9 +27,9 @@ const createTransportRecorder = (
       return this.transport.close();
     }
 
-    transport: Transport;
+    transport: Transport<Descriptor>;
 
-    constructor(t: Transport) {
+    constructor(t: Transport<Descriptor>) {
       super();
       this.transport = t;
     }

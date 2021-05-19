@@ -11,8 +11,8 @@ const addressFormatMap = {
   bech32: 2,
   cashaddr: 3,
 };
-export async function getWalletPublicKey(
-  transport: Transport,
+export async function getWalletPublicKey<Descriptor>(
+  transport: Transport<Descriptor>,
   options: {
     path: string;
     verify?: boolean;

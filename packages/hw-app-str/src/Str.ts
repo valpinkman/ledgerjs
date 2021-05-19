@@ -50,10 +50,10 @@ const TX_MAX_SIZE = 1540;
  * const str = new Str(transport)
  */
 
-export default class Str {
-  transport: Transport;
+export default class Str<Descriptor> {
+  transport: Transport<Descriptor>;
 
-  constructor(transport: Transport, scrambleKey = "l0v") {
+  constructor(transport: Transport<Descriptor>, scrambleKey = "l0v") {
     this.transport = transport;
     transport.decorateAppAPIMethods(
       this,

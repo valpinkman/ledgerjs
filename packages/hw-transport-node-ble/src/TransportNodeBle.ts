@@ -21,6 +21,7 @@ import {
   connectDevice,
   isDeviceDisconnected,
 } from "./platform";
+
 type Device = any;
 const transportsCache = {};
 type ReconnectionConfig = {
@@ -135,7 +136,9 @@ async function open(deviceOrId: Device | string, needsReconnect: boolean) {
  * import BluetoothTransport from "@ledgerhq/hw-transport-node-ble";
  */
 
-export default class BluetoothTransport extends Transport {
+export default class BluetoothTransport<
+  Descriptor
+> extends Transport<Descriptor> {
   /**
    *
    */

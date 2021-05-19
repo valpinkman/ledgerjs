@@ -161,7 +161,9 @@ async function open(deviceOrId: Device | string, needsReconnect: boolean) {
  * import BluetoothTransport from "@ledgerhq/hw-transport-web-ble";
  */
 
-export default class BluetoothTransport extends Transport {
+export default class BluetoothTransport<
+  Descriptor
+> extends Transport<Descriptor> {
   static isSupported = (): Promise<boolean> =>
     Promise.resolve()
       .then(requiresBluetooth)
@@ -214,7 +216,9 @@ export default class BluetoothTransport extends Transport {
   /**
    * open a bluetooth device.
    */
-  static async open(deviceOrId: Device | string) {
+  static async open<Descriptor>(
+    deviceOrId: Device | string
+  ): Promise<Transport<Descriptor>> {
     return open(deviceOrId, true);
   }
 

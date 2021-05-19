@@ -47,10 +47,10 @@ import BIPPath from "bip32-path";
  *     .catch(e => console.log(`An error occurred (${e.message})`));
  */
 
-export default class Xrp {
-  transport: Transport;
+export default class Xrp<Descriptor> {
+  transport: Transport<Descriptor>;
 
-  constructor(transport: Transport, scrambleKey = "XRP") {
+  constructor(transport: Transport<Descriptor>, scrambleKey = "XRP") {
     this.transport = transport;
     transport.decorateAppAPIMethods(
       this,

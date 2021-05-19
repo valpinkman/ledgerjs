@@ -19,12 +19,10 @@ const inferURLs = async (urls: In): Promise<string[]> => {
   return typeof r === "string" ? [r] : r;
 };
 
-export default (urls: In): new () => Transport => {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-  class StaticTransport extends Transport {
+export default <Descriptor>(urls: In): new () => Transport<Descriptor> => {
+  class StaticTransport extends Transport<Descriptor> {
     static isSupported = HttpTransport.isSupported;
-    static list = (): Promise<string[]> =>
+    static list = (): Promise<any[]> =>
       inferURLs(urls)
         .then((urls) =>
           Promise.all(

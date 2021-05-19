@@ -36,10 +36,10 @@ const SW_CANCEL = 0x6986;
  * const cosmos = new Cosmos(transport)
  */
 
-export default class Cosmos {
-  transport: Transport;
+export default class Cosmos<Descriptor> {
+  transport: Transport<Descriptor>;
 
-  constructor(transport: Transport, scrambleKey: string = APP_KEY) {
+  constructor(transport: Transport<Descriptor>, scrambleKey: string = APP_KEY) {
     this.transport = transport;
     transport.decorateAppAPIMethods(
       this,

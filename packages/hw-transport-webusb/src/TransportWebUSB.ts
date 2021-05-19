@@ -32,7 +32,7 @@ const endpointNumber = 3;
  */
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-export default class TransportWebUSB extends Transport {
+export default class TransportWebUSB<Descriptor> extends Transport<Descriptor> {
   device: USBDevice;
   deviceModel: DeviceModel | null | undefined;
   channel = Math.floor(Math.random() * 0xffff);

@@ -13,7 +13,7 @@ import { DeviceModel } from "@ledgerhq/devices";
 import { TransportError, DisconnectedDevice } from "@ledgerhq/errors";
 
 const filterInterface = (device) =>
-  ["win32", "darwin"].includes(process.platform) // $FlowFixMe
+  ["win32", "darwin"].includes(process.platform)
     ? device.usagePage === 0xffa0
     : device.interface === 0;
 
@@ -32,7 +32,9 @@ const isDisconnectedError = (e) =>
  * TransportNodeHid.create().then(transport => ...)
  */
 
-export default class TransportNodeHidNoEvents extends Transport {
+export default class TransportNodeHidNoEvents<
+  Descriptor
+> extends Transport<Descriptor> {
   /**
    *
    */
@@ -42,12 +44,14 @@ export default class TransportNodeHidNoEvents extends Transport {
   /**
    *
    */
-  static list = (): Promise<any> =>
+  static list = (): Promise<any[]> =>
     Promise.resolve(getDevices().map((d) => d.path));
 
   /**
    */
-  static listen = (observer: Observer<DescriptorEvent<any>>): Subscription => {
+  static listen = <Descriptor>(
+    observer: Observer<DescriptorEvent<Descriptor>>
+  ): Subscription => {
     getDevices().forEach((device) => {
       const deviceModel = identifyUSBProductId(device.productId);
       observer.next({
@@ -66,7 +70,7 @@ export default class TransportNodeHidNoEvents extends Transport {
   /**
    * if path="" is not provided, the library will take the first device
    */
-  static open(path: string | null | undefined) {
+  static open<Descriptor>(path: Descriptor): Promise<Transport<Descriptor>> {
     return Promise.resolve().then(() => {
       if (path) {
         return new TransportNodeHidNoEvents(new HID.HID(path));

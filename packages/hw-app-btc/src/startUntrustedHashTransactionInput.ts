@@ -2,8 +2,8 @@ import type Transport from "@ledgerhq/hw-transport";
 import type { Transaction } from "./types";
 import { createVarint } from "./varint";
 import { MAX_SCRIPT_BLOCK } from "./constants";
-export function startUntrustedHashTransactionInputRaw(
-  transport: Transport,
+export function startUntrustedHashTransactionInputRaw<Descriptor>(
+  transport: Transport<Descriptor>,
   newTransaction: boolean,
   firstRound: boolean,
   transactionData: Buffer,
@@ -28,8 +28,8 @@ export function startUntrustedHashTransactionInputRaw(
     transactionData
   );
 }
-export async function startUntrustedHashTransactionInput(
-  transport: Transport,
+export async function startUntrustedHashTransactionInput<Descriptor>(
+  transport: Transport<Descriptor>,
   newTransaction: boolean,
   transaction: Transaction,
   inputs: Array<{

@@ -38,10 +38,10 @@ const INS_SIGN_MSGPACK = 0x08;
  * const algo = new Algorand(transport)
  */
 
-export default class Algorand {
-  transport: Transport;
+export default class Algorand<Descriptor> {
+  transport: Transport<Descriptor>;
 
-  constructor(transport: Transport) {
+  constructor(transport: Transport<Descriptor>) {
     this.transport = transport;
     transport.decorateAppAPIMethods(this, ["getAddress", "sign"], "ALGO");
   }

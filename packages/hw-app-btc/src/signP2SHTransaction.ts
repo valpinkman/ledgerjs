@@ -32,8 +32,8 @@ export type SignP2SHTransactionArg = {
   segwit?: boolean;
   transactionVersion?: number;
 };
-export async function signP2SHTransaction(
-  transport: Transport,
+export async function signP2SHTransaction<Descriptor>(
+  transport: Transport<Descriptor>,
   arg: SignP2SHTransactionArg
 ) {
   const {

@@ -20,10 +20,10 @@ export type { AddressFormat };
  * const btc = new Btc(transport)
  */
 
-export default class Btc {
-  transport: Transport;
+export default class Btc<Descriptor> {
+  transport: Transport<Descriptor>;
 
-  constructor(transport: Transport, scrambleKey = "BTC") {
+  constructor(transport: Transport<Descriptor>, scrambleKey = "BTC") {
     this.transport = transport;
     transport.decorateAppAPIMethods(
       this,

@@ -45,10 +45,10 @@ export type GetVersionResult = {
  * const tez = new Tezos(transport)
  */
 
-export default class Tezos {
-  transport: Transport;
+export default class Tezos<Descriptor> {
+  transport: Transport<Descriptor>;
 
-  constructor(transport: Transport) {
+  constructor(transport: Transport<Descriptor>) {
     this.transport = transport;
     transport.decorateAppAPIMethods(
       this,

@@ -45,10 +45,10 @@ const CHUNK_SIZE = 250;
  * const trx = new Trx(transport)
  */
 
-export default class Trx {
-  transport: Transport;
+export default class Trx<Descriptor> {
+  transport: Transport<Descriptor>;
 
-  constructor(transport: Transport, scrambleKey = "TRX") {
+  constructor(transport: Transport<Descriptor>, scrambleKey = "TRX") {
     this.transport = transport;
     transport.decorateAppAPIMethods(
       this,

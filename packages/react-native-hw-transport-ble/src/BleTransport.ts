@@ -263,7 +263,9 @@ async function open(deviceOrId: Device | string, needsReconnect: boolean) {
  * import BluetoothTransport from "@ledgerhq/react-native-hw-transport-ble";
  */
 
-export default class BluetoothTransport extends Transport {
+export default class BluetoothTransport<
+  Descriptor
+> extends Transport<Descriptor> {
   /**
    *
    */
@@ -358,14 +360,16 @@ export default class BluetoothTransport extends Transport {
    * Open a BLE transport
    * @param {*} deviceOrId
    */
-  static async open(deviceOrId: Device | string) {
+  static async open<Descriptor>(
+    deviceOrId: Device | string
+  ): Promise<Transport<Descriptor>> {
     return open(deviceOrId, true);
   }
 
   /**
    * Globally disconnect a BLE device by its ID
    */
-  static disconnect = async (id: any) => {
+  static disconnect = async (id: any): Promise<void> => {
     log("ble-verbose", `user disconnect(${id})`);
     await bleManager.cancelDeviceConnection(id);
   };

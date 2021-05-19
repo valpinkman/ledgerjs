@@ -26,7 +26,7 @@ export type SpeculosTransportOpts = {
  * const res = await transport.send(0xE0, 0x01, 0, 0);
  */
 
-export default class SpeculosTransport extends Transport {
+export default class SpeculosTransport extends Transport<SpeculosTransportOpts> {
   static isSupported = (): Promise<boolean> => Promise.resolve(true);
   // this transport is not discoverable
   static list = (): any => Promise.resolve([]);
@@ -37,7 +37,10 @@ export default class SpeculosTransport extends Transport {
   /**
    *
    */
-  static open = (opts: SpeculosTransportOpts): Promise<SpeculosTransport> =>
+  static open = <Descriptor extends SpeculosTransportOpts>(
+    opts: Descriptor,
+    _timeout?: number | undefined
+  ): Promise<Transport<Descriptor>> =>
     new Promise((resolve, reject) => {
       const socket = new net.Socket();
       socket.on("error", (e) => {

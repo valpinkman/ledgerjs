@@ -52,7 +52,7 @@ const liveDeviceEvents = liveDeviceEventsSubject;
  * TransportHID.create().then(transport => ...)
  */
 
-export default class HIDTransport extends Transport {
+export default class HIDTransport<Descriptor> extends Transport<Descriptor> {
   id: number;
   deviceModel: DeviceModel | null | undefined;
 

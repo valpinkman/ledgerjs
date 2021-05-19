@@ -3,8 +3,8 @@ import type Transport from "@ledgerhq/hw-transport";
 import type { Transaction } from "./types";
 import { MAX_SCRIPT_BLOCK } from "./constants";
 import { createVarint } from "./varint";
-export async function getTrustedInputRaw(
-  transport: Transport,
+export async function getTrustedInputRaw<Descriptor>(
+  transport: Transport<Descriptor>,
   transactionData: Buffer,
   indexLookup?: number | null | undefined
 ): Promise<string> {
@@ -30,8 +30,8 @@ export async function getTrustedInputRaw(
   const res = trustedInput.slice(0, trustedInput.length - 2).toString("hex");
   return res;
 }
-export async function getTrustedInput(
-  transport: Transport,
+export async function getTrustedInput<Descriptor>(
+  transport: Transport<Descriptor>,
   indexLookup: number,
   transaction: Transaction,
   additionals: Array<string> = []

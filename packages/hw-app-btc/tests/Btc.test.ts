@@ -11,7 +11,7 @@ test("btc.getWalletPublicKey", async () => {
       <= 410486b865b52b753d0a84d09bc20063fab5d8453ec33c215d4019a5801c9c6438b917770b2782e29a9ecc6edb67cd1f0fbf05ec4c1236884b6d686d6be3b1588abb2231334b453654666641724c683466564d36756f517a7673597135767765744a63564dbce80dd580792cd18af542790e56aa813178dc28644bb5f03dbd44c85f2d2e7a9000
     `)
   );
-  // @ts-expect-error Todo: fix types for Transport creator
+
   const transport = await Transport.open();
   const btc = new Btc(transport);
   const result = await btc.getWalletPublicKey("44'/0'/0'/0");
@@ -61,7 +61,7 @@ test("btc 2", async () => {
     <= 3145022100ff492ad0b3a634aa7751761f7e063bf6ef4148cd44ef8930164580d5ba93a17802206fac94b32e296549e2e478ce806b58d61cfacbfed35ac4ceca26ac531f92b20a019000
     `)
   );
-  // @ts-expect-error Todo: fix types for Transport creator
+
   const transport = await Transport.open();
   const btc = new Btc(transport);
   const tx1 = btc.splitTransaction(
@@ -117,7 +117,7 @@ test("btc 3", async () => {
     <= 3045022100b5b1813992282b9a1fdd957b9751d79dc21018abc6586336e272212cc89cfe84022053765a1da0bdb5a0631a9866f1fd4c583589d5188b11cfa302fc20cd2611a71e019000
     `)
   );
-  // @ts-expect-error Todo: fix types for Transport creator
+
   const transport = await Transport.open();
   const btc = new Btc(transport);
   const tx1 = btc.splitTransaction(
@@ -150,7 +150,7 @@ test("btc 4", async () => {
     <= 3045022100e32b32b8a6b4228155ba4d1a536d8fed9900606663fbbf4ea420ed8e944f9c18022053c97c74d2f6d8620d060584dc7886f5f3003684bb249508eb7066215172281a9000
     `)
   );
-  // @ts-expect-error Todo: fix types for Transport creator
+
   const transport = await Transport.open();
   const btc = new Btc(transport);
   const result = await btc.signMessageNew(
@@ -203,8 +203,8 @@ test("btc seg multi", async () => {
     <= 3145022100c820c90ce84c6567617733cd6409c4b8f7469b863d811a3cdc73bf3fa43912bc0220320b7fd259939a6821d371f2b49a755d1ca588bffb1476fbb2da68907427b54b019000
     `)
   );
-  // @ts-expect-error Todo: fix types for Transport creator
-  const transport = await Transport.open();
+
+  let transport = await Transport.open();
   const btc = new Btc(transport);
   const tx1 = btc.splitTransaction(
     "0100000000010130992c1559a43de1457f23380fefada09124d22594bbeb46ab6e9356e8407d39010000001716001417507f91a6594df7367a0561e4d3df376a829e1fffffffff02c03b47030000000017a9142397c9bb7a3b8a08368a72b3e58c7bb850555792875f810acf0900000017a914813a2e6c7538f0d0afbdeb5db38608804f5d76ab8702483045022100e09ca8a5357623438daee5b7804e73c9209de7c645efd405f13f83420157c48402207d3e4a30f362e062e361967c7afdd45e7f21878a067b661a6635669e620f99910121035606550fd51f6b063b69dc92bd182934a34463f773222743f300d3c7fd3ae47300000000",
@@ -214,8 +214,8 @@ test("btc seg multi", async () => {
     "0100000000010176ef6abce7feecefbe1322da6cd21245f2d475a1836f13e99f56847bf7127f7c0100000017160014a4e29e297768fccd19cabc21cced93a6afc803eeffffffff0280778e060000000017a9142397c9bb7a3b8a08368a72b3e58c7bb8505557928795061b51b100000017a914c5cfa33e119f60c7cb40bd6b9cfe9e78b026eb6a8702473044022031f0c72683374275328ef0341ed1f233c55a37e21335f9c111c25645b50d0d4e0220670b833be0f688c237bf4466d2b94c99631ada3557c95a7d13bfbb9177125c340121020879f8616da54f8ac5476b97fbe0329c5a0e4cbd32e22e7348262bdfad99a44200000000",
     true
   );
-  // @ts-expect-error Todo: fix types for Transport creator
-  const transport = await Transport.open();
+
+  transport = await Transport.open();
   const result = await btc.createPaymentTransactionNew({
     inputs: [
       [tx1, 0, undefined, undefined],
@@ -256,7 +256,7 @@ test("btc sign p2sh seg", async () => {
     <= 3045022100932934ee326c19c81b72fb03cec0fb79ff980a8076639f77c7edec35bd59da1e02205e4030e8e0fd2405f6db2fe044c49d3f191adbdc0e05ec7ed4dcc4c6fe7310e5019000
     `)
   );
-  // @ts-expect-error Todo: fix types for Transport creator
+
   const transport = await Transport.open();
   const btc = new Btc(transport);
   const tx1 = btc.splitTransaction(
@@ -291,7 +291,7 @@ test("signMessage", async () => {
     <= 314402205eac720be544d3959a760d9bfd6a0e7c86d128fd1030038f06d85822608804e20220385d83273c9d03c469596292fb354b07d193034f83c2633a4c1f057838e12a5b9000
     `)
   );
-  // @ts-expect-error Todo: fix types for Transport creator
+
   const transport = await Transport.open();
   const btc = new Btc(transport);
   const res = await btc.signMessageNew(

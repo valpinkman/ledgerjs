@@ -21,7 +21,9 @@ let listenDevicesPollingSkip = () => false;
  * TransportNodeHid.create().then(transport => ...)
  */
 
-export default class TransportNodeHid extends TransportNodeHidNoEvents {
+export default class TransportNodeHid<
+  Descriptor
+> extends TransportNodeHidNoEvents<Descriptor> {
   /**
    *
    */
@@ -57,15 +59,15 @@ export default class TransportNodeHid extends TransportNodeHidNoEvents {
 
   /**
    */
-  static listen = (
-    observer: Observer<DescriptorEvent<string | null | undefined>>
+  static listen = <Descriptor>(
+    observer: Observer<DescriptorEvent<Descriptor>>
   ): Subscription => {
     let unsubscribed = false;
     Promise.resolve(getDevices()).then((devices) => {
       // this needs to run asynchronously so the subscription is defined during this phase
       for (const device of devices) {
         if (!unsubscribed) {
-          const descriptor: string = device.path;
+          const descriptor = device.path;
           const deviceModel = identifyUSBProductId(device.productId);
           observer.next({
             type: "add",
@@ -121,7 +123,9 @@ export default class TransportNodeHid extends TransportNodeHidNoEvents {
   /**
    * if path="" is not provided, the library will take the first device
    */
-  static open(path: string | null | undefined) {
+  static open<Descriptor>(
+    path: Descriptor
+  ): Promise<TransportNodeHid<Descriptor>> {
     return Promise.resolve().then(() => {
       if (path) {
         return new TransportNodeHid(new HID.HID(path));

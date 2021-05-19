@@ -50,7 +50,8 @@ export type Observer<Ev> = Readonly<{
  * it can be for instance an ID, an file path, a URL,...
  */
 
-export default class Transport {
+export default class Transport<Descriptor> {
+  private _descriptor?: Descriptor;
   exchangeTimeout = 30000;
   unresponsiveTimeout = 15000;
   deviceModel: DeviceModel | null | undefined = null;
@@ -66,7 +67,7 @@ export default class Transport {
    * @example
    * TransportFoo.list().then(descriptors => ...)
    */
-  static readonly list: () => Promise<Array<any>>;
+  static readonly list: <Descriptor>() => Promise<Descriptor[]>;
 
   /**
    * Listen all device events for a given Transport. The method takes an Obverver of DescriptorEvent and returns a Subscription (according to Observable paradigm https://github.com/tc39/proposal-observable )
@@ -100,10 +101,10 @@ export default class Transport {
    * @example
   TransportFoo.open(descriptor).then(transport => ...)
    */
-  static readonly open: (
+  static readonly open: <Descriptor>(
     descriptor: any,
     timeout?: number
-  ) => Promise<Transport>;
+  ) => Promise<Transport<Descriptor>>;
 
   /**
    * low level api to communicate with the device
@@ -224,10 +225,10 @@ export default class Transport {
    * @example
   TransportFoo.create().then(transport => ...)
    */
-  static create(
+  static create<Descriptor>(
     openTimeout = 3000,
     listenTimeout?: number
-  ): Promise<Transport> {
+  ): Promise<Transport<Descriptor>> {
     return new Promise((resolve, reject) => {
       let found = false;
       const sub = this.listen({
@@ -235,7 +236,10 @@ export default class Transport {
           found = true;
           if (sub) sub.unsubscribe();
           if (listenTimeoutId) clearTimeout(listenTimeoutId);
-          this.open(e.descriptor, openTimeout).then(resolve, reject);
+          this.open<Descriptor>(e.descriptor as Descriptor, openTimeout).then(
+            resolve,
+            reject
+          );
         },
         error: (e) => {
           if (listenTimeoutId) clearTimeout(listenTimeoutId);

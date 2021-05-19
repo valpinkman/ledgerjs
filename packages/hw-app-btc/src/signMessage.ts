@@ -1,8 +1,8 @@
 import type Transport from "@ledgerhq/hw-transport";
 import bippath from "bip32-path";
 import { MAX_SCRIPT_BLOCK } from "./constants";
-export async function signMessage(
-  transport: Transport,
+export async function signMessage<Descriptor>(
+  transport: Transport<Descriptor>,
   {
     path,
     messageHex,

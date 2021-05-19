@@ -66,10 +66,10 @@ const remapTransactionRelatedErrors = (e) => {
  * const eth = new Eth(transport)
  */
 
-export default class Eth {
-  transport: Transport;
+export default class Eth<Descriptor> {
+  transport: Transport<Descriptor>;
 
-  constructor(transport: Transport, scrambleKey = "w0w") {
+  constructor(transport: Transport<Descriptor>, scrambleKey = "w0w") {
     this.transport = transport;
     transport.decorateAppAPIMethods(
       this,
@@ -1165,8 +1165,8 @@ export default class Eth {
 
 // PRIVATE
 
-function provideERC20TokenInformation(
-  transport: Transport,
+function provideERC20TokenInformation<Descriptor>(
+  transport: Transport<Descriptor>,
   data: Buffer
 ): Promise<boolean> {
   return transport.send(0xe0, 0x0a, 0x00, 0x00, data).then(
@@ -1182,8 +1182,8 @@ function provideERC20TokenInformation(
   );
 }
 
-function setExternalPlugin(
-  transport: Transport,
+function setExternalPlugin<Descriptor>(
+  transport: Transport<Descriptor>,
   payload: string,
   signature: string
 ): Promise<boolean> {

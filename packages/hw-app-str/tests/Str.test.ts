@@ -11,7 +11,6 @@ test("getAppConfiguration", async () => {
     <= 000300019000
     `)
   );
-  // @ts-expect-error
   const transport = await Transport.open();
   const str = new Str(transport);
   const result = await str.getAppConfiguration();
@@ -25,7 +24,6 @@ test("getPublicKey", async () => {
     <= 7691d85048acc4ed085d9061ce0948bbdf7de6a92b790aaf241d31b7dcaa423881b9f7cb3bd2fad4f0fdab9da1407e8e85f702fa58584fba3104e4549b85ca8046d73a4010870bc4765eff7e0bafcfe91390c4475ba3fcc598750758ed770e0f9000
     `)
   );
-  // @ts-expect-error
   const transport = await Transport.open();
   const str = new Str(transport);
   const { publicKey, raw } = await str.getPublicKey("44'/148'/0'", true, true);
@@ -46,7 +44,6 @@ test("signTransaction", async () => {
     <= 79e6da561676d16f17e91ad0dbbe917e3da0fffe660aa9f277669385960b0aec8dcf002b7305b329cc02f2eabd2f20320dee4828b412ed2850b9771ffb23920d9000
     `)
   );
-  // @ts-expect-error
   const transport = await Transport.open();
   const str = new Str(transport);
   const transaction = Buffer.from(
