@@ -91,7 +91,6 @@ export default class TransportNodeHidNoEvents<
   constructor(device: HID.HID) {
     super();
     this.device = device;
-    // @ts-expect-error accessing low level API in C
     const info = device.getDeviceInfo();
     this.deviceModel =
       info && info.product ? identifyProductName(info.product) : null;
